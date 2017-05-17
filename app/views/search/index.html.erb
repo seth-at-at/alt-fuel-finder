@@ -1,13 +1,14 @@
-<div class="stations">
-
+<div class="stations" style="text-align: center;">
+<h2>Stations</h2>
 <% @request["fuel_stations"].each do |station| %>
-  <div class="closest_stations">  
-    <%= station["station_name"] %> <br>
-    <%= station["station_phone"] %> <br>
-    <%= station["fuel_type_code"] %> <br>
-    <%= station["city"] %> <br>
-    <%= station["state"] %> <br> <br>
+  <div class="closest_stations">
+    <strong>Station Name:</strong>  <%= station["station_name"] %> <br>
+    <strong>Phone:</strong> <%= station["station_phone"] %> <br>
+    <strong>Fuel Type:</strong> <%= station["fuel_type_code"] %> <br>
+    <strong>City:</strong> <%= station["city"] %> <br>
+    <strong>State:</strong> <%= station["state"] %> <br>
   </div>
+  _____________________________________________________________________________________________ <br> <br>
 <% end %>
 
 </div>
