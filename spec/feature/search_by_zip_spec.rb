@@ -5,8 +5,8 @@ RSpec.feature "from home page" do
     visit root_path
     fill_in "q", with: "80203"
     click_on "Locate"
-    request = HTTParty.
-    expect(request).to eq
+    request = HTTParty.get("https://developer.nrel.gov/api/alt-fuel-stations/v1.json?fuel_type=E85,ELEC&state=CA&limit=2&api_key=#{ENV["auth_key"]}")
+    expect(current_path).to eq search_path
   end
 end
 
