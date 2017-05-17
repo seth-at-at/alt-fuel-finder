@@ -1,6 +1,6 @@
 class SearchController < ApplicationController
   def index
-    @request = AltFuelService.search_url(params[:q])
-    binding.pry
+    request2 = AltFuelService.new(params[:q])
+    @request = request2.search_url
   end
 end
