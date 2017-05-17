@@ -16,8 +16,11 @@ group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
   gem 'capybara'
-  gem 'vcr'
   gem 'pry'
+end
+
+group :test do
+  gem 'vcr'
   gem 'webmock'
 end
 
