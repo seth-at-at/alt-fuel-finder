@@ -1,0 +1,13 @@
+<div class="stations">
+
+<% @request["fuel_stations"].each do |station| %>
+  <div class="closest_stations">  
+    <%= station["station_name"] %> <br>
+    <%= station["station_phone"] %> <br>
+    <%= station["fuel_type_code"] %> <br>
+    <%= station["city"] %> <br>
+    <%= station["state"] %> <br> <br>
+  </div>
+<% end %>
+
+</div>
