@@ -5,8 +5,9 @@
     <strong>Station Name:</strong>  <%= station["station_name"] %> <br>
     <strong>Phone:</strong> <%= station["station_phone"] %> <br>
     <strong>Fuel Type:</strong> <%= station["fuel_type_code"] %> <br>
-    <strong>City:</strong> <%= station["city"] %> <br>
-    <strong>State:</strong> <%= station["state"] %> <br>
+    <strong>Distance:</strong> <%= station["distance"] %> miles <br>
+    <strong>Access:</strong> <%= station["access"] %> <%= station["access_days_time"] %> <br> <br>
+    <strong>Address:</strong> <%= station["street_address"] %> <%= station["city"] %> <%= station["state"] %> <br>
   </div>
   _____________________________________________________________________________________________ <br> <br>
 <% end %>
