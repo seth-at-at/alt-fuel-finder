@@ -10,12 +10,14 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'httparty'
+gem 'omniauth'
 
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
   gem 'capybara'
   gem 'vcr'
+  gem 'pry'
 end
 
 group :development do
