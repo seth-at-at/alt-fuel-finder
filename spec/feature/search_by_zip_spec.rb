@@ -1,12 +1,17 @@
 require 'rails_helper'
 
 RSpec.feature "from home page" do
+  before(:each) do
+
+  end
+  
   scenario "when filling in search form" do
     visit root_path
     fill_in "q", with: "80203"
     click_on "Locate"
-    # request = HTTParty.get("https://developer.nrel.gov/api/alt-fuel-stations/v1.json?fuel_type=E85,ELEC&state=CA&limit=2&api_key=#{ENV["auth_key"]}")
     expect(current_path).to eq search_path
+    expect(page).to have_css(".stations")
+    expect(page).to have_css('.closest_stations', count: 10)
   end
 end
 
